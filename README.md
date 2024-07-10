@@ -12,3 +12,7 @@ This project is a pricing component application generated with Angular CLI versi
 
 ## Version History
 - 0.1: Initial Release
+
+
+## ![ezgif-3-987746886f](https://github.com/Kaltartir16/TimellyPricingApp/assets/161650511/11344849-a37c-4f68-a500-2e53d0803042)
+
