@@ -1,0 +1,29 @@
+<div class="pricing-container_BGImg"></div>
+<div class="pricing-container">
+  <img src="assets/timellylogo.svg" alt="Timelly Logo" class="logo">
+  <h1>Timelly Pricing Plans</h1>
+  <p class="description">Choose the plan that fits your needs and get started with Timelly today!</p>
+  <div [ngClass]="{'monthly-active': isMonthly, 'annually-active': !isMonthly}" class="toggle-buttons">
+    <div class="toggle-slider"></div>
+    <button class="toggle-button" [class.active]="isMonthly" (click)="togglePricing()">Monthly</button>
+    <button class="toggle-button" [class.active]="!isMonthly" (click)="togglePricing()">Annually - 20% Discount</button>
+  </div>
+  <div class="pricing-cards">
+    <div class="card" *ngFor="let plan of plans">
+      <div class="card-header">
+        <img src="assets/TimellyLogoWhenClose.svg" alt="Timelly Logo" class="card-logo">
+        <h2>{{ plan.name }}</h2>
+        <p class="price">${{ getPrice(plan) | number:'1.0-0' }} <span>{{ isMonthly ? 'per month' : 'per year' }}</span></p>
+      </div>
+      <div class="card-body">
+        <ul>
+          <li *ngFor="let feature of plan.features">
+            <i class="fas fa-check-circle"></i> {{ feature }}
+          </li>
+        </ul>
+        <button class="plan-button">{{ plan.name === 'Free' ? 'Your Plan' : 'Select Plan' }}</button>
+        <button class="details-button">More Details</button>
+      </div>
+    </div>
+  </div>
+</div>
