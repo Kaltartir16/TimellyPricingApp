@@ -54,4 +54,4 @@ export class PricingComponent {
   getPrice(plan: any): number {
     return this.isMonthly ? plan.monthlyPrice : plan.annualPrice;
   }
-}
+}//PricingComponent
